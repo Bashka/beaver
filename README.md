@@ -29,7 +29,7 @@ cd my-project
 
 # Подготовка проекта к сборке
 function ci_bootstrap {
-    mysql -uadmin -pmy_pass -e "DROP DATABASE db; CREATE DATABASE db"
+    mysql -u admin -p my_pass -e "DROP DATABASE db; CREATE DATABASE db"
 }
 
 # Загрузка изменений исходных кодов
@@ -53,8 +53,8 @@ function ci_unit_test {
 
 # Развертывание проекта
 function ci_deploy {
-    return mysql -uadmin -pmy_pass db < migration/schema.sql &&\
-        mysql -uadmin -pmy_pass db < migration/data.sql
+    return mysql -u admin -p my_pass db < migration/schema.sql &&\
+        mysql -u admin -p my_pass db < migration/data.sql
 }
 
 # Уведомление о результатах интеграции
