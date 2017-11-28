@@ -29,7 +29,7 @@ cd my-project
 
 # Подготовка проекта к сборке
 function ci_bootstrap {
-    mysql -uadmin -pmy_pass -e "DROP DATABASE db; CREATE DATABASE db"
+    mysql -u admin -p my_pass -e "DROP DATABASE db; CREATE DATABASE db"
 }
 
 # Загрузка изменений исходных кодов
