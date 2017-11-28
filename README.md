@@ -53,8 +53,8 @@ function ci_unit_test {
 
 # Развертывание проекта
 function ci_deploy {
-    return mysql -uadmin -pmy_pass db < migration/schema.sql &&\
-        mysql -uadmin -pmy_pass db < migration/data.sql
+    return mysql -u admin -p my_pass db < migration/schema.sql &&\
+        mysql -u admin -p my_pass db < migration/data.sql
 }
 
 # Уведомление о результатах интеграции
